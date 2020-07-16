@@ -25,7 +25,7 @@ class ShortUrlsController < ApplicationController
             end
         else
             flash[:notice] = "Short url for this url already exist"
-            redirect_to shortened_path(@url.check_for_duplicate_url)
+            redirect_to shortened_path(@url.check_for_duplicate_url.short_url)
         end
     end 
  
